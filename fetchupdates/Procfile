@@ -1,1 +1,1 @@
-web: python3 fetch_updates.py
+web: python3 fetchupdates/fetch_updates.py
