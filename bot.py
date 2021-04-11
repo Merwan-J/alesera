@@ -9,6 +9,7 @@ import mongoengine
 import datetime
 import emoji
 import configparser
+import os
 
 from db.users import Seeker
 from db.jobs import Post
@@ -23,6 +24,8 @@ from keyboards import *
 # api_id = config.getint('telegram_api', 'api_id')
 # api_hash = config['telegram_api']['api_hash']
 # TOKEN = config['bot_api']['token']
+
+PORT = int(os.environ.get('PORT', 5000))
 
 db_url = 'mongodb+srv://merwan:n8Bu9xq4AJResU4m@alesera.5idrx.mongodb.net/alesera?retryWrites=true&w=majority'
 db = 'alesera'
@@ -463,7 +466,10 @@ def main():
     dp.add_handler(MessageHandler(Filters.forwarded,fwd_msg_handler,run_async=True))
     dp.add_handler(CallbackQueryHandler(button,run_async=True))
 
-    updater.start_polling()
+    updater.start_webhook(listen="0.0.0.0",
+                          port=int(PORT),
+                          url_path=TOKEN)
+    updater.bot.setWebhook('https://alesera.herokuapp.com/' + TOKEN)
 
 
 if __name__ == '__main__':
