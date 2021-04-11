@@ -470,6 +470,8 @@ def main():
                           port=int(PORT),
                           url_path=TOKEN)
     updater.bot.setWebhook('https://alesera.herokuapp.com/' + TOKEN)
+    
+    updater.idle()
 
 
 if __name__ == '__main__':
