@@ -1,1 +1,1 @@
-web: python3 fetchupdates/fetch_updates.py
+web: Python 3.7.4 fetchupdates/fetch_updates.py
