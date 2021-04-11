@@ -161,7 +161,7 @@ def notify_users(update, context,job,filtered_users):
         user.save()
 
 
-def register_job(job_dict, demanders,msg_id,from_chat_id,status='open')
+def register_job(job_dict, demanders,msg_id,from_chat_id,status='open'):
     try:
         job = Post.objects.get(
               job_title=job_dict['title'],job_type=job_dict['type'],
