@@ -2,8 +2,7 @@ from telethon import TelegramClient, events
 import logging
 import configparser
 import os
-from socks import SOCKS5, SOCKS4, HTTP
-
+import socks
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 
@@ -19,7 +18,7 @@ api_id = 3883924
 api_hash = '00c46303da8d943ccf5c88f7172efee9'
 
 
-client = TelegramClient('anon', api_id, api_hash, proxy=("SOCKS5", '0.0.0.0', PORT))
+client = TelegramClient('anon', api_id, api_hash, proxy=(socks.SOCKS5, '0.0.0.0', PORT))
 print(client)
 
 
