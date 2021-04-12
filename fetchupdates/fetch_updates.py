@@ -18,9 +18,9 @@ api_id = 3883924
 api_hash = '00c46303da8d943ccf5c88f7172efee9'
 
 # , proxy=(socks.HTTP, 'https://fetchupdates.herokuapp.com/', 80)
-client = TelegramClient('anon', api_id, api_hash, connection=connection.ConnectionTcpMTProxyRandomizedIntermediate,
-    proxy=('https://fetchupdates.herokuapp.com/', 80, '00000000000000000000000000000000')
-)
+# , connection=connection.ConnectionTcpMTProxyRandomizedIntermediate,
+#     proxy=('https://fetchupdates.herokuapp.com/', 80, '00000000000000000000000000000000')
+client = TelegramClient('anon', api_id, api_hash)
 print(client)
 
 
