@@ -1,6 +1,6 @@
 from telegram.ext import *
 from telegram import *
-import requests
+# import requests
 import re
 import json
 import time
