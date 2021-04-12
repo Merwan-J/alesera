@@ -17,8 +17,10 @@ PORT = int(os.environ.get('PORT', 5000))
 api_id = 3883924
 api_hash = '00c46303da8d943ccf5c88f7172efee9'
 
-# , proxy=(socks.SOCKS5, '0.0.0.0', 80)
-client = TelegramClient('anon', api_id, api_hash)
+# , proxy=(socks.HTTP, 'https://fetchupdates.herokuapp.com/', 80)
+client = TelegramClient('anon', api_id, api_hash, connection=connection.ConnectionTcpMTProxyRandomizedIntermediate,
+    proxy=('https://fetchupdates.herokuapp.com/', 80, '00000000000000000000000000000000')
+)
 print(client)
 
 
