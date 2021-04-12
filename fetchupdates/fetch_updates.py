@@ -17,8 +17,8 @@ PORT = int(os.environ.get('PORT', 5000))
 api_id = 3883924
 api_hash = '00c46303da8d943ccf5c88f7172efee9'
 
-
-client = TelegramClient('anon', api_id, api_hash, proxy=(socks.SOCKS5, '0.0.0.0', 80))
+# , proxy=(socks.SOCKS5, '0.0.0.0', 80)
+client = TelegramClient('anon', api_id, api_hash)
 print(client)
 
 
