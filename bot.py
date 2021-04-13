@@ -1,6 +1,8 @@
 from telegram.ext import *
 from telegram import *
 # import requests
+from telethon import TelegramClient, events
+
 import re
 import json
 import time
