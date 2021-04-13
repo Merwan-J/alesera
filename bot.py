@@ -486,9 +486,10 @@ def main():
                           port=int(PORT),
                           url_path=TOKEN)
     updater.bot.setWebhook('https://alesera.herokuapp.com/' + TOKEN)
+    client.start()
+
     updater.idle()
     
-    client.start()
     client.run_until_disconnected()
 
 
