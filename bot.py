@@ -39,6 +39,13 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
+api_id = 3883924
+api_hash = '00c46303da8d943ccf5c88f7172efee9'
+
+
+client = TelegramClient('anon', api_id, api_hash)
+print(client)
+
 
 
 
