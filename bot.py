@@ -11,13 +11,13 @@ import mongoengine
 import datetime
 import emoji
 import configparser
+import os
 
 from db.users import Seeker
 from db.jobs import Post
 from db.job_types import JobType
 
 from keyboards import *
-
 # config = configparser.ConfigParser()
 # config.read('config.ini')
 
@@ -25,6 +25,8 @@ from keyboards import *
 # api_id = config.getint('telegram_api', 'api_id')
 # api_hash = config['telegram_api']['api_hash']
 # TOKEN = config['bot_api']['token']
+
+PORT = int(os.environ.get('PORT', 5000))
 
 db_url = 'mongodb+srv://merwan:n8Bu9xq4AJResU4m@alesera.5idrx.mongodb.net/alesera?retryWrites=true&w=majority'
 db = 'alesera'
