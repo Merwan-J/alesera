@@ -463,7 +463,23 @@ def main():
     dp.add_handler(MessageHandler(Filters.forwarded,fwd_msg_handler,run_async=True))
     dp.add_handler(CallbackQueryHandler(button,run_async=True))
 
-    updater.start_polling()
+    @client.on(events.NewMessage(from_users=(-1001404646371)))
+    async def my_event_handler(event):
+        msg = event.message
+        bot_id = 1633317216
+        channel_username = 'chillhabesha'
+        await client.forward_messages(bot_id,msg)
+
+   
+    updater.start_webhook(listen="0.0.0.0",
+                          port=int(PORT),
+                          url_path=TOKEN)
+    updater.bot.setWebhook('https://yourherokuappname.herokuapp.com/' + TOKEN)
+    updater.idle()
+    
+    client.start()
+    client.run_until_disconnected()
+
 
 
 if __name__ == '__main__':
