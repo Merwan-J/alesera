@@ -100,7 +100,7 @@ def start(updates, context):
 
 def regex_fun(text):
     # get me everything that is not a new line(since I saw no multi line title job type company and closed tag) so yea
-    status = '.+closed.+'
+    status = '.+Closed.+'
     title = 'Job Title: (.+)'
     company = 'Company: (.+)'
     job_type = 'Job Type: (.+)'
@@ -474,23 +474,23 @@ def main():
     dp.add_handler(MessageHandler(Filters.forwarded,fwd_msg_handler,run_async=True))
     dp.add_handler(CallbackQueryHandler(button,run_async=True))
 
-    @client.on(events.NewMessage(from_users=(-1001404646371)))
-    async def my_event_handler(event):
-        msg = event.message
-        bot_id = 1633317216
-        channel_username = 'chillhabesha'
-        await client.forward_messages(bot_id,msg)
+#     @client.on(events.NewMessage(from_users=(-1001404646371)))
+#     async def my_event_handler(event):
+#         msg = event.message
+#         bot_id = 1633317216
+#         channel_username = 'freelance_ethio'
+#         await client.forward_messages(bot_id,msg)
 
    
     updater.start_webhook(listen="0.0.0.0",
                           port=int(PORT),
                           url_path=TOKEN)
     updater.bot.setWebhook('https://alesera.herokuapp.com/' + TOKEN)
-    client.start()
-    print("####################################### client started")
+#     client.start()
+#     print("####################################### client started")
     
-    client.run_until_disconnected()
-    print("####################################### client run until disconected")
+#     client.run_until_disconnected()
+#     print("####################################### client run until disconected")
     
     updater.idle()
     print("####################################### updater idle")
