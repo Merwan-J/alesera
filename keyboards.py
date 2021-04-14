@@ -56,9 +56,10 @@ other_job_keyboard = [
          InlineKeyboardButton("Nurse", callback_data='other Nurse'),
         ],
 
-        [InlineKeyboardButton("Sales", callback_data='other Sales'),
+        [
          InlineKeyboardButton("Assistant", callback_data='other Assistant'),
          InlineKeyboardButton("Tutor", callback_data='other Tutor'),
+         InlineKeyboardButton("Others", callback_data='other Others'),
         ],
         ]
  
