@@ -70,16 +70,16 @@ menu_keyboard = [
                     [InlineKeyboardButton("Available Jobs",callback_data="open jobs"),
                     InlineKeyboardButton("Closed Jobs",callback_data="closed jobs")
                     ],
-                    [InlineKeyboardButton("Main Menu",callback_data="main menu")],
+                    [InlineKeyboardButton("📝Main Menu",callback_data="main menu")],
                 ]
 
 after_menu_keyboard = [
                     [InlineKeyboardButton("Other Available Jobs",callback_data="other jobs")
                     ],
-                    [InlineKeyboardButton(" 🧑‍💻👩‍💻  My Profile   ",callback_data="profile"),
-                    InlineKeyboardButton("  Analysis  ",callback_data="bot status")],
-                    [InlineKeyboardButton("About",callback_data="about"),
-                    InlineKeyboardButton("Back",callback_data="back")],
+                    [InlineKeyboardButton("👥 My Profile   ",callback_data="profile"),
+                    InlineKeyboardButton("📊Analysis  ",callback_data="bot status")],
+                    [InlineKeyboardButton("ℹ️About Us",callback_data="about"),
+                    InlineKeyboardButton("⬅️Back",callback_data="back")],
                 ]
 
 
