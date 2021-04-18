@@ -423,7 +423,7 @@ def button(update, context) -> None:
     elif query.data == 'main menu':
         reply_markup = InlineKeyboardMarkup(after_menu_keyboard)
         query.edit_message_text(
-                    text="Main Menu",
+                    text="Main Menu                 ",
                     reply_markup=reply_markup
                     )
     elif query.data == 'back':
