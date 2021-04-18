@@ -326,10 +326,10 @@ Date Registered: {date_registered}
 Job Type: {job_type}
     """
     keyboard = [
-                    [InlineKeyboardButton("Change Job Type",callback_data="update profile"),
-                    InlineKeyboardButton("Back",callback_data="back")
+                    [InlineKeyboardButton("⚙️Change Job Type",callback_data="update profile"),
+                    InlineKeyboardButton("⬅️Back",callback_data="back")
                     ],
-                    [InlineKeyboardButton("Main Menu",callback_data="main menu")],
+                    [InlineKeyboardButton("📝Main Menu",callback_data="main menu")],
                 ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     query.edit_message_text(
