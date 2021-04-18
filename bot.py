@@ -32,6 +32,7 @@ db = 'alesera'
 mongoengine.connect(alias='user-db-alias',db=db, host=db_url)
 mongoengine.connect(alias='jobtype-db-alias',db=db, host=db_url)
 mongoengine.connect(alias='post-db-alias',db=db, host=db_url)
+mongoengine.connect(alias='demanders-db-alias',db=db, host=db_url)
 
 
 logging.basicConfig(
@@ -367,7 +368,7 @@ def about(update,context):
     user_id = update.effective_user.id
 
     text = """
-    This bot is created to ease the the tiring process of job searching.
+    This bot is created to ease the tiring process of job searching.
 
 All Jobs the Bot sends are from a telegram channel @freelance_ethio.
 
