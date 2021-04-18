@@ -343,6 +343,8 @@ def get_bot_status(update,context,user_id):
     total_users = Seeker.objects.count()
     job_type = Seeker.objects.get(user_id=user_id).job_type
     jobs = Post.objects.filter(category=job_type.lower(),job_status='open')
+    demanders = Demanders.objects.get(category=job_type.lower())
+
     total_jobs = Post.objects.count()
     
     text = f"""
@@ -350,7 +352,7 @@ def get_bot_status(update,context,user_id):
 
 Total Available Jobs: {total_jobs}
 
-Total {job_type} Job Seekers: {Demanders.objects.get(category=job_type.lower()).demanders}
+Total {job_type} Job Seekers: {demanders.demanders}
 
 Total Available {job_type} Jobs: {jobs}
 
