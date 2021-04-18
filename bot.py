@@ -354,7 +354,7 @@ Total Available Jobs: {total_jobs}
 
 Total {job_type} Job Seekers: {demanders.demanders}
 
-Total Available {job_type} Jobs: {jobs}
+Total Available {job_type} Jobs: {jobs.count()}
 
 
 
