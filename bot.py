@@ -98,7 +98,7 @@ def start(updates, context):
 
 
 def regex_fun(text):
-    print(text)
+    
     # get me everything that is not a new line(since I saw no multi line title job type company and closed tag) so yea
     status = '.+Closed.+'
     title = 'Job Title: (.+)'
@@ -115,7 +115,7 @@ def regex_fun(text):
             return_list.append(match_list[i][0])
         except IndexError:
             return_list.append(match_list[i])
-    print("job status =", return_list[0])
+   
     return {'status': "closed" if return_list[0] else 'open', 'title':return_list[1],
             'company':return_list[2], 'type':return_list[3], 'description':return_list[4]}
 
@@ -207,7 +207,7 @@ def fwd_msg_handler(update, context):
     #"https://t.me/freelance_ethio/{update.message.message_id}"
         print("recieved the job")
         rgx_dict = regex_fun(update.message.text)
-        print(rgx_dict['status'])
+        
         filtered_users = check_for_users(rgx_dict['title'])
         if rgx_dict['status'].lower() == 'open':
             job = register_job(rgx_dict,msg_id,from_chat_id)
