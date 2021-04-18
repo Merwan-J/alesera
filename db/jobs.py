@@ -11,6 +11,5 @@ class Post(Document):
     description = StringField()
     company = StringField(required=False)
     job_status = StringField(default='open')
-    demanding_users = IntField(default=0)
     from_chat_id = IntField()
     meta = {'db_alias': 'post-db-alias'}
