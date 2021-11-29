@@ -25,10 +25,13 @@ from keyboards import *
 # api_id = config.getint('telegram_api', 'api_id')
 # api_hash = config['telegram_api']['api_hash']
 # TOKEN = config['bot_api']['token']
-PORT = int(os.environ.get('PORT', 5000))
 
-db_url = 'mongodb://merwan:n8Bu9xq4AJResU4m@alesera.5idrx.mongodb.net/alesera?retryWrites=true&w=majority'
-db = 'alesera'
+PORT = int(os.environ.get('PORT', 5000))
+TOKEN = os.environ.get('TOKEN')
+
+db_url = os.environ.get('DB_URL')
+db = os.environ.get('DB')
+
 mongoengine.connect(alias='user-db-alias',db=db, host=db_url)
 mongoengine.connect(alias='jobtype-db-alias',db=db, host=db_url)
 mongoengine.connect(alias='post-db-alias',db=db, host=db_url)
@@ -467,7 +470,6 @@ def button(update, context) -> None:
         
 
 def main():
-    TOKEN = "1633317216:AAH6Hv95bENbVQlWAmVzx5IqtLj1v2j_HyU"
     bot = Bot(TOKEN)
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
