@@ -1,6 +1,7 @@
 from telethon import TelegramClient, events
 import logging
 import configparser
+import os
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
@@ -11,9 +12,9 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 # api_id = config.getint('telegram_api', 'api_id')
 # api_hash = config['telegram_api']['api_hash']
 
+api_id = int(os.environ.get('API_ID'))
+aoi_hash = os.environ.get('API_HASH')
 
-api_id = 3883924
-api_hash = '00c46303da8d943ccf5c88f7172efee9'
 
 
 client = TelegramClient('anon', api_id, api_hash)
