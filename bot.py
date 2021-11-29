@@ -43,7 +43,7 @@ logger = logging.getLogger(__name__)
 
 
 api_id = int(os.environ.get('API_ID'))
-aoi_hash = os.environ.get('API_HASH')
+api_hash = os.environ.get('API_HASH')
 
 print('############################################',api_hash,str(api_id))
 
