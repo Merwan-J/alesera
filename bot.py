@@ -27,7 +27,7 @@ from keyboards import *
 # TOKEN = config['bot_api']['token']
 PORT = int(os.environ.get('PORT', 5000))
 
-db_url = 'mongodb+srv://merwan:n8Bu9xq4AJResU4m@alesera.5idrx.mongodb.net/alesera?retryWrites=true&w=majority'
+db_url = 'mongodb://merwan:n8Bu9xq4AJResU4m@alesera.5idrx.mongodb.net/alesera?retryWrites=true&w=majority'
 db = 'alesera'
 mongoengine.connect(alias='user-db-alias',db=db, host=db_url)
 mongoengine.connect(alias='jobtype-db-alias',db=db, host=db_url)
