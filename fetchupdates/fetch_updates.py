@@ -13,7 +13,7 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 # api_hash = config['telegram_api']['api_hash']
 
 api_id = int(os.environ.get('API_ID'))
-aoi_hash = os.environ.get('API_HASH')
+api_hash = os.environ.get('API_HASH')
 
 
 
